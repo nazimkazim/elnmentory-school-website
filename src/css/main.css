@@ -521,6 +521,7 @@ Services
 .service:hover .underline {
   background: var(--clr-primary-9);
 }
+
 @media screen and (min-width: 676px) {
   .services-center {
     display: grid;

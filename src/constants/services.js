@@ -6,17 +6,20 @@ export default [
     icon: <FaCode className="service-icon" />,
     title: "Web разработка",
     text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    link:'webdev'
   },
   {
     id: 2,
     icon: <FaFantasyFlightGames className="service-icon" />,
     title: "Разработка игр",
     text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    link:'gamesdev'
   },
   {
     id: 3,
     icon: <FaLanguage className="service-icon" />,
     title: "Английский язык",
     text: `I'm baby meditation tofu chillwave, distillery messenger bag thundercats chicharrones kale chips gochujang. Banh mi direct trade marfa salvia.`,
+    link:'english'
   },
 ]
