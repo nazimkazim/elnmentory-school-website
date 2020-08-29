@@ -1,8 +1,8 @@
 import React from "react";
 import Title from "./Title";
-import { FaAngleDoubleRight,FaCalendarAlt, FaBookOpen } from "react-icons/fa";
+import { FaAngleDoubleRight, FaCalendarAlt, FaBookOpen } from "react-icons/fa";
 import { useStaticQuery, graphql } from "gatsby";
-import ButtonDetailed from '../components/Button-detailed'
+import ButtonDetailed from '../components/Button-detailed';
 
 const query = graphql`
   {
@@ -43,8 +43,9 @@ const Jobs = () => {
         </div>
         <article className="job-info">
           <h3>{ position }</h3>
-          <h4><FaBookOpen/>{" "}{ city }</h4>
-        <p className="job-date"><FaCalendarAlt/>{" "}{ date }</p>
+          <h4><FaBookOpen />{ " " }{ city }</h4>
+          <p className="job-date"><FaCalendarAlt />{ " " }{ date }</p>
+          <h3>Навыки</h3>
           { desc.map(item => {
             return (
               <div key={ item.id } className="job-desc">
@@ -57,7 +58,7 @@ const Jobs = () => {
         <div>
         </div>
       </div>
-      <ButtonDetailed to="about" name="о нас"/>
+      <ButtonDetailed to="about" name="все курсы" />
     </section>
   );
 };
