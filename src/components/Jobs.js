@@ -1,8 +1,7 @@
 import React from "react";
 import Title from "./Title";
-import { FaAngleDoubleRight } from "react-icons/fa";
+import { FaAngleDoubleRight,FaCalendarAlt, FaBookOpen } from "react-icons/fa";
 import { useStaticQuery, graphql } from "gatsby";
-import { Link } from "gatsby";
 import ButtonDetailed from '../components/Button-detailed'
 
 const query = graphql`
@@ -28,11 +27,11 @@ const Jobs = () => {
   const data = useStaticQuery(query);
   const { allStrapiJobs: { nodes: jobs } } = data;
   const [value, setValue] = React.useState(0);
-  const { company, position, date, city, desc } = jobs[value];
+  const { position, date, city, desc } = jobs[value];
   //console.log(company, position, date, city, desc);
   return (
     <section className="section jobs">
-      <Title title="experience" />
+      <Title title="Самые популярные курсы" />
       <div className="jobs-center">
         <div className="btn-container">
           { jobs.map((item, index) => {
@@ -44,8 +43,8 @@ const Jobs = () => {
         </div>
         <article className="job-info">
           <h3>{ position }</h3>
-          <h4>{ company }</h4>
-          <p className="job-date">{ date }</p>
+          <h4><FaBookOpen/>{" "}{ city }</h4>
+        <p className="job-date"><FaCalendarAlt/>{" "}{ date }</p>
           { desc.map(item => {
             return (
               <div key={ item.id } className="job-desc">
@@ -58,7 +57,7 @@ const Jobs = () => {
         <div>
         </div>
       </div>
-      <ButtonDetailed to="about" name="больше"/>
+      <ButtonDetailed to="about" name="о нас"/>
     </section>
   );
 };
