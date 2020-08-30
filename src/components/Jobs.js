@@ -58,7 +58,7 @@ const Jobs = () => {
         <div>
         </div>
       </div>
-      <ButtonDetailed to="about" name="все курсы" />
+      <ButtonDetailed to="courses" name="все курсы" />
     </section>
   );
 };
