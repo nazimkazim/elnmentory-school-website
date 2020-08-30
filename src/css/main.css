@@ -693,7 +693,8 @@ Projects
   border-radius: var(--radius);
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
+  margin-bottom: .3rem;
 }
 .about-stack span {
   margin-top: 0.5rem;
