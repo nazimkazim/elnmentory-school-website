@@ -2,6 +2,7 @@ import React from "react"
 import Title from "../components/Title"
 import { useStaticQuery, graphql } from "gatsby";
 import Image from 'gatsby-image'
+import Layout from '../components/Layout'
 
 const query = graphql`
   {
@@ -32,6 +33,7 @@ export default function Course() {
   const { allStrapiProjects: { nodes: projects } } = data;
   console.log(projects)
   return (
+    <Layout>
     <section className="section projects">
       <Title title="Все курсы"/>
       <div className="section-center projects-center">
@@ -49,10 +51,12 @@ export default function Course() {
                   <span key={item.id}>{item.title}</span>
                 ))}
               </div>
+                {/* <div className="project-level">{project.github}</div> */}
             </div>
           </article>
         ))}
       </div>
     </section>
+    </Layout>
   );
 }

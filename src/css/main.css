@@ -694,7 +694,7 @@ Projects
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.7rem;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
 }
 .about-stack span {
   margin-top: 0.5rem;
@@ -707,6 +707,22 @@ Projects
 }
 .project-icon:hover {
   color: var(--clr-primary-1);
+}
+
+.project-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  padding: 1.1rem;
+  background: rgb(126, 130, 185);
+  background: linear-gradient(
+    90deg,
+    rgba(126, 130, 185, 1) 0%,
+    rgba(158, 161, 209, 1) 78%
+  );
+  width: 60%;
+  border-radius: 5px;
 }
 @media screen and (min-width: 576px) {
   .project-img {

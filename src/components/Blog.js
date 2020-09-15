@@ -1,11 +1,23 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Image from "gatsby-image"
-import { Link } from "gatsby"
-const Blog = () => {
-  return <h2>blog component</h2>
-}
+import React from "react";
+import PropTypes from "prop-types";
+import Image from "gatsby-image";
+import { Link } from "gatsby";
+const Blog = ({ id, tilte, image, date, category, slug, desc }) => {
+  return <Link to={ `/blogs/${slug}` } className="blog" key={ id }>
+    <article>
+      <Image fluid={ image.childImageSharp.fluid } className="blog-img" />
+      <div className="blog-card">
+        <h4>{ tilte }</h4>
+        <p>{ desc }</p>
+        <div className="blog-footer">
+          <p>{ category }</p>
+          <p>{date}</p>
+        </div>
+      </div>
+    </article>
+  </Link>;
+};
 
-Blog.propTypes = {}
+Blog.propTypes = {};
 
-export default Blog
+export default Blog;
